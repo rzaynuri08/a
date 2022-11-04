@@ -1,0 +1,124 @@
+html{
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: rgb(0, 0, 0);
+    background-size: cover;
+    background-image: url(bg.jpg);
+    background-repeat: no-repeat;
+    font-family: "Roboto", sans-serif;
+    color: rgb(134, 134, 134);
+}
+
+h2{
+    line-height: 80px;
+    display: inline-block;
+    margin-left: 40px;
+    color: rgb(134, 134, 134);
+}
+
+ul{
+    float: right;
+    margin-left: 40px;
+    list-style: none;
+}
+
+ul li{
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 10px;
+}
+
+ul li a{
+    text-decoration: none;
+    font-weight: lighter;
+    color: rgb(134, 134, 134);
+}
+
+ul li a:hover{
+    color: rgb(88, 0, 0);
+    transition: all .4s ease-in-out;
+}
+
+.code{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.code #nav-code{
+    width: 70%;
+    border-radius: 35px;
+    box-shadow: 3px 3px 10px 1px rgb(117, 28, 28);
+    transition: all .6s ease-in-out;
+}
+
+.code #nav-code:hover{
+    box-shadow: 0px 0px 0px 0px;
+    transition: all .9s ease-in-out;
+}
+
+.content p{
+    text-align: center;
+    font-size: 30px;
+}
+
+label #close,
+label #btn{
+    color: rgb(134, 134, 134);
+    font-size: 30px;
+    float: right;
+    margin-right: 40px;
+    line-height: 80px;
+    cursor: pointer;
+    display: none;
+ }
+
+ label #btn:hover,
+ label #close:hover{
+    color: rgb(85, 0, 0);
+ }
+
+#check{
+    display: none;
+}
+
+@media (max-width: 992px) {
+    label #btn{
+        display: block;
+    }
+    body{
+        overflow: hidden;
+    }
+
+    ul{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        margin-right: 0px;
+        right: -120%;
+        top: 90px;
+        background-color: rgba(0, 0, 0, 0.8);
+        text-align: center;
+    }
+
+    ul li{
+        display: block;
+        line-height: 10px;
+        margin: 50px 0;
+    }
+
+    #check:checked ~ ul{
+        right: 0;
+    }
+
+    #check:checked ~ label #btn{
+        display: none;
+    }
+
+    #check:checked ~ label #close{
+        display: block;
+    }
+}
